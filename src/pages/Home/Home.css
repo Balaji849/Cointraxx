@@ -11,9 +11,10 @@
     align-items: center;
     text-align: center;
     gap: 30px;
+    display: relative;
 }
 .hero h1{
-    font-size: max(4vw,36px);
+    font-size: max(6vw,36px);
 }
 .hero p{
    width: 75%;
@@ -52,7 +53,9 @@
 .crypto-table{
 max-width: 800px;
 margin: auto;
-background: linear-gradient(rgba(84,3,255,0.15),rgba(105,2,153,0.15));
+background: linear-gradient(rgba(53, 7, 150, 0.15),rgba(105,2,153,0.15));
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
 }
 .table-layout{
     display: grid;
@@ -105,4 +108,24 @@ background: linear-gradient(rgba(84,3,255,0.15),rgba(105,2,153,0.15));
     .hero form input{
         width: 100%;
     }
+}
+.floating-left {
+  width: 200px;     /* adjust as needed */
+  height: 200px;
+  position: absolute;               /* push it to the right side */
+  top: 170px; 
+  left: 90px;
+}
+.floating-ryt {
+  width: 200px;     /* adjust as needed */
+  height: 200px;
+  position: absolute;               /* push it to the right side */
+  top: 170px; 
+  right: 80px;
+}
+@media (max-width: 1150px) {
+  .floating-left, .floating-ryt {
+   display: none;
+
+  }
 }

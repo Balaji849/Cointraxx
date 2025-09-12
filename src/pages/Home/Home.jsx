@@ -2,6 +2,10 @@ import './Home.css';
 import { useContext,useEffect,useState } from 'react';
 import { CoinContext } from '../../context/Coincontext';
 import { Link } from 'react-router-dom';
+import {motion} from 'framer-motion';
+import bitcoinlogo from '../../assets/ddsf.png';
+import ethereumlogo from '../../assets/etherem_img.png';
+
 const Home = () => {
 
   const {allCoin,currency} = useContext(CoinContext);
@@ -27,11 +31,33 @@ const Home = () => {
   useEffect(() => {
     setDisplayCoin(allCoin)
   },[allCoin])
+  
 
   return (
+    <>
+    <motion.img
+        src={ethereumlogo}
+        alt="Logo"
+      animate={{ y: [0, -20, 0] }}
+      transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+      className="floating-ryt"
+    />
+   
     <div className='home'>
+       <motion.img
+        src={bitcoinlogo}
+        alt="Logo"
+      animate={{ y: [0, -20, 0] }}
+      transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+      className="floating-left"
+    />
+    
+      
       <div className='hero'>
-        <h1>Largest <br />Crypto Marketplace</h1>
+
+       
+        
+        <h1>COINTRAXX</h1>
         <p>Welcome to the world's largest cryptocurrency
           marketplace, where you can buy, sell, and trade a wide range of digital assets. 
           Join millions of users in exploring the future of finance and investment
@@ -46,12 +72,12 @@ const Home = () => {
         
 
          </datalist>
-
-
+      
           <button type='submit'>
             Search
           </button>
         </form>
+        
       </div>
       <div className="crypto-table">
         <div className="table-layout">
@@ -83,6 +109,8 @@ const Home = () => {
       </div>
 
     </div>
+    
+    </>
   )
 }
 

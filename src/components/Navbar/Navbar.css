@@ -14,8 +14,9 @@
     align-items: center;
     justify-content: space-between;
     padding: 10px 10%;
-    color: #ddd;
+    color: #e3e3e3;
     border-bottom: 2px solid #3c3c3c;
+    font-weight: bold;
 }
 .navbar .logo-img{
     width: max(12vm,120px);
