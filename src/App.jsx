@@ -4,7 +4,7 @@ import { Routes,Route } from "react-router-dom"
 import Home from "./pages/Home/Home"
 import Coin from "./pages/Coin/Coin"
 import Footer from "./components/Footer/Footer"
-
+import Footercontent from  "../src/components/Footer/Footercontent"
 const App = () => {
   return (
     
@@ -15,6 +15,8 @@ const App = () => {
       <Route path="/coin/:coinId" element={<Coin/>}/>
      </Routes>
      <Footer/>
+      <Footercontent/>
+
     </div>
   )
 }

@@ -1,0 +1,143 @@
+.footercontent {
+
+  color: #ffffff;
+  padding: 2rem;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  max-width: 1400px;
+  margin: auto;
+}
+
+.footer-logo {
+  color: teal;
+}
+
+.logo-icon {
+  height: 40px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.footer-newsletter h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.footer-newsletter p {
+  margin-top: 0.5rem;
+  color: #ffffff;
+}
+
+.footer-subscribe {
+  display: flex;
+  align-items: flex-end;
+ margin-bottom: 85px;
+}
+
+.subscribe-box {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.subscribe-box input {
+  flex: 1;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  outline: none;
+}
+
+.subscribe-box button {
+  background: teal;
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.subscribe-box button:hover {
+  background: #006d6d;
+}
+
+.footer-sectionx  ul {
+    margin-left: 50px;
+    margin-bottom: 0.5rem;
+    list-style: none;
+  
+}
+.footer-sectionx  p {
+    margin-left: 50px;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+.footer-sectionx  li {
+    margin: 0.4rem 0;
+  
+}
+.footer-sectionx a:hover {
+  color: teal;
+}
+
+.footer-section p {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section li {
+  margin: 0.4rem 0;
+}
+
+.footer-section a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.footer-section a:hover {
+  color: teal;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  list-style: none;
+}
+
+.footer-socials a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.footer-socials a:hover {
+  color: teal;
+}
+
+.footer-bottom {
+  border-top: 1px solid #ddd;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.footer-bottom ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}

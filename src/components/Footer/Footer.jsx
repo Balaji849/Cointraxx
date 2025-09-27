@@ -17,9 +17,6 @@ const Footer = () => {
        
         </div>
       </div>
-        <p>
-            Copyright  &copy;2025 CoinTraxx - All rights reserved.
-        </p>
     </div>
   )
 }

@@ -6,6 +6,7 @@ import {motion} from 'framer-motion';
 import bitcoinlogo from '../../assets/ddsf.png';
 import ethereumlogo from '../../assets/etherem_img.png';
 
+
 const Home = () => {
 
   const {allCoin,currency} = useContext(CoinContext);
