@@ -87,11 +87,10 @@ function Footercontent() {
 
           {/* Social Links */}
           <ul className="footer-socials">
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">Instagram</a></li>
-            <li><a href="#">Twitter</a></li>
-            <li><a href="#">GitHub</a></li>
-            <li><a href="#">Dribbble</a></li>
+            <li><a href="#"><img width="48" height="48" src="https://img.icons8.com/fluency/48/facebook-new.png" alt="facebook-new"/></a>facebook</li>
+            <li><a href="#"><img width="48" height="48" src="https://img.icons8.com/3d-fluency/94/instagram-logo.png" alt="instagram-logo"/></a>Instagram</li>
+            <li><a href="#"><img width="48" height="48" src="https://img.icons8.com/color/48/twitter-circled--v1.png" alt="twitter-circled--v1"/></a>Twitter</li>
+            <li><a href="#"><img width="48" height="48" src="https://img.icons8.com/ios-filled/50/github.png" alt="github"/></a>GitHub</li>
           </ul>
         </div>
       </div>

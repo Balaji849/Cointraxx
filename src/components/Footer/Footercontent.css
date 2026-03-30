@@ -471,3 +471,19 @@
         font-size: 12px;
     }
 }
+
+.footer-socials li a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.footer-socials li a img {
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}

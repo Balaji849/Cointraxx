@@ -92,12 +92,12 @@
 
 .table-layout {
     display: grid;
-    grid-template-columns: 1fr 1.5fr;
-    padding: 12px 15px;
+    grid-template-columns: auto 1fr auto;
+    padding: 12px 10px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     align-items: center;
-    gap: 10px;
-    font-size: 12px;
+    gap: 8px;
+    font-size: 11px;
 }
 
 .table-layout:last-child {
@@ -107,28 +107,40 @@
 .table-layout div {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 6px;
+    min-width: 0;
+    overflow: hidden;
 }
 
 .table-layout div img {
-    width: 24px;
-    height: 24px;
+    width: 20px;
+    height: 20px;
     object-fit: contain;
+    flex-shrink: 0;
+}
+
+.table-layout div:nth-child(2) {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .table-layout .green {
     color: hsla(120, 87%, 67%, 0.8);
-    text-align: center;
+    text-align: right;
+    font-weight: 600;
 }
 
 .table-layout .red {
     color: hsla(0, 85%, 54%, 0.893);
-    text-align: center;
+    text-align: right;
+    font-weight: 600;
 }
 
 .market-cap,
 .change {
     text-align: right;
+    display: none;
 }
 
 /* Floating elements - Hidden on mobile */
@@ -171,13 +183,20 @@
     }
 
     .table-layout {
-        grid-template-columns: 0.5fr 2fr 1fr 1fr;
-        padding: 14px 18px;
-        font-size: 13px;
+        grid-template-columns: auto 1.2fr auto auto;
+        padding: 12px 12px;
+        font-size: 12px;
+        gap: 8px;
     }
 
-    .crypto-table {
-        padding: 0;
+    .market-cap,
+    .change {
+        display: none;
+    }
+
+    .table-layout div img {
+        width: 22px;
+        height: 22px;
     }
 }
 
@@ -208,14 +227,73 @@
         font-size: 14px;
     }
 
+    .crypto-table {
+        padding: 0 5px;
+    }
+
     .table-layout {
-        grid-template-columns: 0.5fr 2fr 1fr 1fr 1.2fr;
-        padding: 15px 20px;
-        font-size: 14px;
+        grid-template-columns: auto 1.5fr 1fr;
+        padding: 12px 10px;
+        font-size: 12px;
+        gap: 8px;
     }
 
     .market-cap {
+        display: none;
+    }
+
+    .change {
         display: block;
+    }
+
+    .table-layout div img {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+/* Medium Tablets (650px and up) */
+@media (min-width: 650px) {
+    .crypto-table {
+        padding: 0;
+    }
+
+    .table-layout {
+        grid-template-columns: auto 1.5fr 0.7fr 0.9fr;
+        padding: 12px 12px;
+        font-size: 12px;
+        gap: 8px;
+    }
+
+    .market-cap {
+        display: none;
+    }
+
+    .change {
+        display: block;
+    }
+}
+
+/* Medium-Large Tablets (720px and up) */
+@media (min-width: 720px) {
+    .table-layout {
+        grid-template-columns: auto 1.5fr 0.8fr 0.8fr;
+        padding: 13px 12px;
+        font-size: 13px;
+        gap: 8px;
+    }
+
+    .market-cap {
+        display: none;
+    }
+
+    .change {
+        display: block;
+    }
+
+    .table-layout div img {
+        width: 26px;
+        height: 26px;
     }
 }
 
@@ -254,13 +332,25 @@
     .crypto-table {
         max-width: 800px;
         margin: 30px auto;
+        padding: 0;
     }
 
     .table-layout {
-        grid-template-columns: 0.5fr 2fr 1fr 1fr 1.5fr;
-        padding: 15px 20px;
+        grid-template-columns: 0.4fr 2fr 1fr 1fr 1.3fr;
+        padding: 14px 14px;
         border-bottom: 2px solid #ffffff;
-        font-size: 15px;
+        font-size: 13px;
+        gap: 8px;
+    }
+
+    .market-cap,
+    .change {
+        display: block;
+    }
+
+    .table-layout div img {
+        width: 28px;
+        height: 28px;
     }
 }
 
