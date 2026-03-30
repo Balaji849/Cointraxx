@@ -1,131 +1,357 @@
-.home{
+/* ============================================
+   HOME - FULLY RESPONSIVE
+   ============================================ */
+
+.home {
     padding: 0px 10px;
-    padding-bottom: 100px;
+    padding-bottom: 50px;
 }
 
-.hero{
-    max-width: 600px;
-    margin: 80px auto;
+/* Base Mobile Styles (320px and up) */
+.hero {
+    max-width: 100%;
+    margin: 40px auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 30px;
-    display: relative;
+    gap: 20px;
+    padding: 0 15px;
 }
-.hero h1{
-    font-size: max(6vw,36px);
+
+.hero h1 {
+    font-size: clamp(28px, 7vw, 48px);
+    font-weight: 600;
+    line-height: 1.2;
+    margin: 0;
 }
-.hero p{
-   width: 75%;
-   color: #e3e3e3;
-   line-height: 1.5;
+
+.hero p {
+    width: 100%;
+    color: #e3e3e3;
+    line-height: 1.6;
+    font-size: clamp(14px, 2vw, 16px);
+    margin: 0;
 }
-.hero form{
+
+.hero form {
     padding: 8px;
-    width: 80%;
+    width: 100%;
+    max-width: 500px;
     background-color: white;
     border-radius: 5px;
-    font-size: 20px;
+    font-size: 16px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 10px;
-
+    gap: 8px;
+    margin: 10px auto 0;
 }
-.hero input{
+
+.hero input {
     flex: 1;
-    font-size: 16px;
+    font-size: 14px;
     outline: none;
     border: none;
-    padding-left: 10px;
+    padding: 10px;
+    min-width: 0;
 }
 
-.hero button{
-    padding: 10px 20px;
+.hero input::placeholder {
+    color: #999;
+}
+
+.hero button {
+    padding: 8px 14px;
     border-radius: 5px;
-    background:#7927ff;
+    background: #7927ff;
     color: white;
-    font-size: 16px;
+    font-size: 12px;
+    font-weight: 600;
     cursor: pointer;
     border: none;
+    white-space: nowrap;
+    transition: background 0.3s ease;
 }
-.crypto-table{
-max-width: 800px;
-margin: auto;
-background: linear-gradient(rgba(53, 7, 150, 0.15),rgba(105,2,153,0.15));
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(5px);
+
+.hero button:hover {
+    background: #6820cc;
 }
-.table-layout{
+
+/* Crypto Table - Base Mobile */
+.crypto-table {
+    max-width: 100%;
+    margin: 20px auto;
+    padding: 0 10px;
+    background: linear-gradient(rgba(53, 7, 150, 0.15), rgba(105, 2, 153, 0.15));
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    border-radius: 8px;
+    overflow-x: auto;
+}
+
+.table-layout {
     display: grid;
-    grid-template-columns: 0.5fr 2fr 1fr 1fr 1.5fr;
-    padding: 15px 20px;
-    border-bottom: 2px solid #ffffff; 
-    align-items: center;
-}
-.market-cap{
-    text-align: right;
-}
-.table-layout:last-child{
-    border-bottom: none;
-}
-.table-layout div{
-    display: flex;
+    grid-template-columns: 1fr 1.5fr;
+    padding: 12px 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     align-items: center;
     gap: 10px;
+    font-size: 12px;
 }
-.table-layout div img{
-    width: 35px;
-   
+
+.table-layout:last-child {
+    border-bottom: none;
 }
-.table-layout .green{
-    color:hsla(120, 87%, 67%, 0.8);
+
+.table-layout div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.table-layout div img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.table-layout .green {
+    color: hsla(120, 87%, 67%, 0.8);
     text-align: center;
 }
-.table-layout .red{
+
+.table-layout .red {
     color: hsla(0, 85%, 54%, 0.893);
     text-align: center;
 }
-.change{
-    text-align: center;
+
+.market-cap,
+.change {
+    text-align: right;
 }
-@media (max-width: 768px){
-    .table-layout{
-        grid-template-columns: 0.5fr 2fr 1fr 1fr;
-    }
-    .table-layout .market-cap{
-        display: none;
-    }
+
+/* Floating elements - Hidden on mobile */
+.floating-left,
+.floating-ryt {
+    display: none;
 }
-@media (max-width: 500px){
-    .table-layout div img{
-        width: 25px;
+
+/* Tablet (480px and up) */
+@media (min-width: 480px) {
+    .home {
+        padding: 0px 15px;
+        padding-bottom: 60px;
     }
-    .table-layout{
+
+    .hero {
+        margin: 50px auto;
+        gap: 22px;
+        padding: 0;
+    }
+
+    .hero h1 {
+        font-size: clamp(32px, 6vw, 44px);
+    }
+
+    .hero p {
+        width: 90%;
+        font-size: clamp(14px, 1.8vw, 16px);
+    }
+
+    .hero form {
+        max-width: 550px;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .hero button {
+        padding: 9px 16px;
         font-size: 13px;
     }
-    .hero form input{
-        width: 100%;
+
+    .table-layout {
+        grid-template-columns: 0.5fr 2fr 1fr 1fr;
+        padding: 14px 18px;
+        font-size: 13px;
+    }
+
+    .crypto-table {
+        padding: 0;
     }
 }
-.floating-left {
-  width: 200px;     /* adjust as needed */
-  height: 200px;
-  position: absolute;               /* push it to the right side */
-  top: 170px; 
-  left: 90px;
-}
-.floating-ryt {
-  width: 200px;     /* adjust as needed */
-  height: 200px;
-  position: absolute;               /* push it to the right side */
-  top: 170px; 
-  right: 80px;
-}
-@media (max-width: 1150px) {
-  .floating-left, .floating-ryt {
-   display: none;
 
-  }
+/* Small Tablets (600px and up) */
+@media (min-width: 600px) {
+    .hero {
+        margin: 60px auto;
+        gap: 25px;
+        max-width: 550px;
+    }
+
+    .hero h1 {
+        font-size: clamp(36px, 5.5vw, 46px);
+    }
+
+    .hero p {
+        width: 85%;
+        font-size: 15px;
+    }
+
+    .hero form {
+        width: 90%;
+        gap: 12px;
+    }
+
+    .hero button {
+        padding: 10px 18px;
+        font-size: 14px;
+    }
+
+    .table-layout {
+        grid-template-columns: 0.5fr 2fr 1fr 1fr 1.2fr;
+        padding: 15px 20px;
+        font-size: 14px;
+    }
+
+    .market-cap {
+        display: block;
+    }
+}
+
+/* Tablets (768px and up) */
+@media (min-width: 768px) {
+    .home {
+        padding: 0px 15px;
+        padding-bottom: 80px;
+    }
+
+    .hero {
+        max-width: 600px;
+        margin: 80px auto;
+        gap: 28px;
+    }
+
+    .hero h1 {
+        font-size: clamp(38px, 5vw, 50px);
+    }
+
+    .hero p {
+        width: 80%;
+        font-size: 16px;
+    }
+
+    .hero form {
+        width: 85%;
+        padding: 10px;
+    }
+
+    .hero button {
+        padding: 10px 20px;
+        font-size: 15px;
+    }
+
+    .crypto-table {
+        max-width: 800px;
+        margin: 30px auto;
+    }
+
+    .table-layout {
+        grid-template-columns: 0.5fr 2fr 1fr 1fr 1.5fr;
+        padding: 15px 20px;
+        border-bottom: 2px solid #ffffff;
+        font-size: 15px;
+    }
+}
+
+/* Medium Screens (900px and up) */
+@media (min-width: 900px) {
+    .home {
+        padding: 0px 20px;
+        padding-bottom: 100px;
+    }
+
+    .hero {
+        max-width: 650px;
+        margin: 90px auto;
+        gap: 30px;
+    }
+
+    .hero h1 {
+        font-size: clamp(40px, 4.5vw, 54px);
+    }
+
+    .hero p {
+        width: 75%;
+        font-size: 17px;
+    }
+
+    .hero form {
+        width: 80%;
+        padding: 10px;
+    }
+
+    /* Show floating elements on larger screens */
+    .floating-left {
+        display: block;
+        width: 180px;
+        height: 180px;
+        position: absolute;
+        top: 150px;
+        left: 40px;
+        opacity: 0.8;
+    }
+
+    .floating-ryt {
+        display: block;
+        width: 180px;
+        height: 180px;
+        position: absolute;
+        top: 150px;
+        right: 40px;
+        opacity: 0.8;
+    }
+}
+
+/* Large Screens (1150px and up) */
+@media (min-width: 1150px) {
+    .hero {
+        position: relative;
+    }
+
+    .floating-left {
+        width: 200px;
+        height: 200px;
+        top: 170px;
+        left: 90px;
+        opacity: 1;
+    }
+
+    .floating-ryt {
+        width: 200px;
+        height: 200px;
+        top: 170px;
+        right: 80px;
+        opacity: 1;
+    }
+}
+
+/* Extra Large Screens (1400px and up) */
+@media (min-width: 1400px) {
+    .home {
+        padding-bottom: 120px;
+    }
+
+    .hero {
+        margin: 100px auto;
+        gap: 35px;
+    }
+
+    .crypto-table {
+        max-width: 900px;
+    }
+
+    .table-layout {
+        padding: 18px 25px;
+    }
 }

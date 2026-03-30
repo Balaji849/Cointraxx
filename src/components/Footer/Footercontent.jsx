@@ -36,7 +36,6 @@ function Footercontent() {
           <div className="footer-sectionx">
             <p>Services</p>
             <ul>
-              <li><a href="#">1on1 Coaching</a></li>
               <li><a href="#">Company Review</a></li>
               <li><a href="#">Accounts Review</a></li>
               <li><a href="#">HR Consulting</a></li>

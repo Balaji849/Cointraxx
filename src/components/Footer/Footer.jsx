@@ -11,7 +11,7 @@ const Footer = () => {
         <div className='logo-foot'>
           <h1>Download our app and Track anywhere</h1>
           <div className='store-logo'>
-               <img src={google}  alt="" />
+               <img src={google} style={{height:"47px"}}  alt="" />
                <img src={apple} style={{height:"47px"}} alt="" />
           </div>
        
